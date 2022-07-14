@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-    margin:0;
-    padding:0;
-}
 :root{
     --primary-color:#786CCB;
     --font-color:#F7F7F9;
     --secondary-color:#3F414E;
+}
+*{
+    margin:0;
+    padding:0;
 }
 body{
     font-family:Roboto, Arial, san-serif;
@@ -47,8 +47,21 @@ p{
     height:45px;
     border-radius:50%;
     background-color: rgba(255, 255, 255, 0.2);
+    position:relative;
+    transition: 0.2;
 }
-
+.radio-btn::after{
+    content:"";
+    height:100%;
+    width:100%;
+    border-radius:100%;
+    position:relative;
+    top:0;
+    left:0;
+    background-color:#3F414E;
+    opacity:0;
+    transition:opacity 0.2s;
+}
 .radio-btn-value{
     position: relative;
     top:30%;
@@ -56,8 +69,9 @@ p{
 .radio-btn:hover{
     background-color:var(--secondary-color);
 }
-.radio-input:checked ~ .radio-label .radio-btn{
-    border:2px solid aqua;
+input:checked ~ .radio-label .radio-btn{
+  border:none;
+  outline:2px solid var(--font-color);
 }
 .submit-btn{
     width:300px;
@@ -67,6 +81,7 @@ p{
     border:none;
     color:var(--font-color);
     cursor:pointer;
+    margin-top:20px;
 }
 .submit-btn:active{
     background-color:var(--font-color);
