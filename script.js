@@ -1,15 +1,35 @@
-const form = document.getElementById("form");
+const form = document.querySelector(".form");
+const radioInputs = document.querySelectorAll(".radio-input");
+const ratingCard = document.querySelector(".card-container");
 
-//Declears radioInput to class name
-const radioInput = document.getElementsByClassName("radio-input");
+let ratingValue;
 
-let ratingValue = 0;
+radioInputs.forEach((input) => {
+  input.addEventListener("change", (e) => {
+    ratingValue = e.target.value;
+  });
+});
 
-for(let i = 0; i<5; i++){
-    radioInput[i].addEventListener("click",() =>{
-        ratingValue = radioInput[i].attributes[1].radioInput;
-    })
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!ratingValue) return;
+  renderThankyouContent(ratingCard, ratingValue);
+});
+
+function renderThankyouContent(container, ratingValue) {
+  container.innerHTML = `
+    <div class="thank-you">
+        <img
+          src="./assets/illustration-thank-you.svg"
+          alt="thankyou"
+          class="thank-you-img"
+        />
+        <p class="result">You selected ${ratingValue} out of 5</p>
+        <h1 class="thank-you__title">Thank you!</h1>
+        <p class="thank-you__description">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+    `;
 }
-console.log(ratingValue);
-
-  
