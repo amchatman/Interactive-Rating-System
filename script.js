@@ -24,9 +24,9 @@ function renderThankyouContent(container, ratingValue) {
           <p class="result">You selected ${ratingValue} out of 5</p>
         </div>
         <h1 class="thank-you-title">Thank you!</h1>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don't hesitate to get in touch!
+        <p class="card-description">
+        Thank you for taking the time to rate our service.
+        Please get in touch if you ever need more assistance. 
         </p>
           <div class="back-btn-container">
             <a href="index.html" class="back-btn">Back</a>
