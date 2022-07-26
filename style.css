@@ -121,13 +121,18 @@ img{
 .thank-you-title{
    margin:10px;
 }
-.back-btn{
+.back-btn,a{
     text-decoration:none;
     color:var(--color-white);
 }
 .back-btn-container{
     margin-top:20px;
     padding:5px;
+}
+.author{
+    color:var(--color-secondary);
+    margin-top:15px;
+    font-size:14px;
 }
 /* Mobile Section starts here */
 @media(max-width:768px){
