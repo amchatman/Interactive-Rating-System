@@ -1,5 +1,5 @@
 # Interactive-Rating-System
-A interactive rating system
+A simple interative form that lets the user give a rating and submit it. On submit a thank you message is given showing the user their rating selection.
 
 # Languages used
 The program makes use of the following languages: HTML, CSS, and JavaScript. 
