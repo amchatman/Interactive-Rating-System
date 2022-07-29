@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
 function renderThankyouContent(container, ratingValue) {
   container.innerHTML = `
     <div class="thank-you-container">
-        <img src="./images/undraw_reviews_lp8w.png" alt="thankyou" class="rating-image"/>
+        <img src="./images/undraw_reviews_lp8w.png" alt="thank you for rating" class="rating-image"/>
         <div class="rating-result-container">
           <p class="result">You selected ${ratingValue} out of 5</p>
         </div>
